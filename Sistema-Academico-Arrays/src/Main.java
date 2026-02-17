@@ -1,15 +1,31 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Scanner input = new Scanner(System.in);
+
+        double[] notas = new double[10];
+
+        System.out.println("ingrese 10 notas : ");
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println("ingrese nota "+i);
+            notas[i] = input.nextDouble();
         }
+        System.out.println("El promedio es "+ promedio(notas));
+
+
+    }
+
+
+    public static double promedio(double[] notas){
+        double promedio = 0;
+        for (int j = 0; j < notas.length; j++) {
+            promedio += notas[j];
+        }
+    return promedio / notas.length;
     }
 }
