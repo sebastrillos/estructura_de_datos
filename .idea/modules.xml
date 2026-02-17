@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Sistema-Academico-Arrays/Sistema-Academico-Arrays.iml" filepath="$PROJECT_DIR$/Sistema-Academico-Arrays/Sistema-Academico-Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/matrices y arreglos.iml" filepath="$PROJECT_DIR$/matrices y arreglos.iml" />
     </modules>
   </component>
