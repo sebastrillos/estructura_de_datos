@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Estructura-de-datos.iml" filepath="$PROJECT_DIR$/Estructura-de-datos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Monitoreo_Sensores/Monitoreo_Sensores.iml" filepath="$PROJECT_DIR$/Monitoreo_Sensores/Monitoreo_Sensores.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sistema-Academico-Arrays/Sistema-Academico-Arrays.iml" filepath="$PROJECT_DIR$/Sistema-Academico-Arrays/Sistema-Academico-Arrays.iml" />
     </modules>
   </component>
