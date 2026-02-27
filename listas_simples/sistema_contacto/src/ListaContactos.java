@@ -49,7 +49,7 @@ public class ListaContactos {
                 actual.setSiguiente(actual.getSiguiente().getSiguiente());
                 return true;
             }
-            actual.setSiguiente(actual.getSiguiente());
+            actual = actual.getSiguiente();
         }
         return false;
     }
@@ -59,7 +59,7 @@ public class ListaContactos {
 
         while(actual != null){
             System.out.println(actual.getDato());
-            actual.setSiguiente(actual.getSiguiente());
+            actual = actual.getSiguiente();
         }
     }
 }
