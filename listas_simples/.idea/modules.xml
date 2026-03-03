@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/historial_navegacion/historial_navegacion.iml" filepath="$PROJECT_DIR$/historial_navegacion/historial_navegacion.iml" />
       <module fileurl="file://$PROJECT_DIR$/listas_simples.iml" filepath="$PROJECT_DIR$/listas_simples.iml" />
       <module fileurl="file://$PROJECT_DIR$/sistema_contacto_arrayList/sistema_contacto_arrayList.iml" filepath="$PROJECT_DIR$/sistema_contacto_arrayList/sistema_contacto_arrayList.iml" />
     </modules>
