@@ -32,4 +32,13 @@ public class Jugador {
     public void setRanking(int ranking) {
         this.ranking = ranking;
     }
+
+    @Override
+    public String toString() {
+        return "Jugador{" +
+                "nombre='" + nombre + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", ranking=" + ranking +
+                '}';
+    }
 }
