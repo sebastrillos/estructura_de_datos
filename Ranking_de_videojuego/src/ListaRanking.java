@@ -112,6 +112,19 @@ public class ListaRanking {
         }
     }
 
+    public Jugador nodoMedio () {
+        Nodo actual = this.cabeza;
+        Jugador medio = null;
+        int mitad = Nodo.tamano / 2 ;
+
+        for (int i = 0; i <= mitad; i++) {
+            medio = actual.getDato();
+            actual = actual.getSiguiente();
+        }
+
+        return medio;
+    }
+
 
 
 }
