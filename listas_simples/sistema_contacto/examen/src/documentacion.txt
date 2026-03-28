@@ -1,0 +1,121 @@
+📘 PARCIAL – ESTRUCTURAS DE DATOS
+Tema: Lista Enlazada Simple en Java
+🧠 Enunciado
+
+Desarrolle un sistema para gestionar un inventario de productos utilizando una Lista Enlazada Simple implementada manualmente (NO usar ArrayList, LinkedList ni estructuras de Java Collections).
+
+Cada Producto debe contener:
+
+Código (int)
+
+Nombre (String)
+
+Precio (double)
+
+Cantidad (int)
+
+📌 Se pide:
+1️⃣ Crear la clase Producto
+
+Debe incluir:
+
+Atributos privados
+
+Constructor
+
+Getters
+
+Método toString()
+
+2️⃣ Crear la clase Nodo
+
+Debe contener:
+
+Un atributo Producto dato
+
+Un atributo Nodo siguiente
+
+Constructor
+
+Getters y setters
+
+3️⃣ Crear la clase ListaProductos
+
+Debe contener:
+
+private Nodo cabeza;
+
+Y los siguientes métodos:
+
+🔹 a) insertarFinal(Producto p)
+
+Inserta un Producto al final de la lista.
+
+🔹 b) buscarPorCodigo(int codigo)
+
+Retorna el Producto si existe.
+Si no existe, retorna null.
+
+🔹 c) eliminarPorCodigo(int codigo)
+
+Elimina el Producto según su código.
+
+Debe:
+
+Retornar true si lo elimina
+
+Retornar false si no lo encuentra
+
+Debe contemplar:
+
+Lista vacía
+
+Eliminación en cabeza
+
+Eliminación en medio
+
+Eliminación al final
+
+🔹 d) listar()
+
+Imprime todos los productos.
+
+🔹 e) contarProductos()
+
+Retorna la cantidad de productos en la lista.
+
+🔹 f) calcularValorTotalInventario()
+
+Retorna la suma total del inventario:
+
+precio × cantidad
+
+de todos los productos.
+
+📌 Restricciones
+
+❌ No usar arreglos
+❌ No usar estructuras de Java Collections
+❌ No usar variables globales fuera de la clase
+
+📌 Parte Teórica (vale 40%)
+
+Responda:
+
+¿Cuál es la complejidad temporal de insertar al final en una lista enlazada simple sin puntero cola?
+
+¿Qué ventaja tiene una lista enlazada frente a un arreglo?
+
+¿Qué desventaja tiene frente a un arreglo?
+
+¿Qué sucede en memoria cuando eliminamos un nodo?
+
+🎯 Punto Extra (Opcional)
+
+Implemente:
+
+mostrarProductosConStockBajo(int limite)
+
+Que muestre los productos cuya cantidad sea menor al límite recibido.
+
+Si quieres, después lo resolvemos como simulacro y te lo califico como profesor 😎🔥

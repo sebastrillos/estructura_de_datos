@@ -84,11 +84,12 @@ public class ListaRanking {
                 temp = temp.getSiguiente();
             }
 
-            int aux = actual.getDato().getRanking();
-            actual.setDato(mayor.getDato());
-            mayor.getDato().setRanking(aux);
-
-            actual = actual.getSiguiente();
+            if (mayor != actual){
+                Jugador aux = actual.getDato ();
+                actual.setDato ( mayor.getDato () );
+                mayor.setDato ( aux );
+            }
+            actual = actual.getSiguiente ();
         }
     }
 
