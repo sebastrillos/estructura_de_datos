@@ -73,7 +73,38 @@ public class CircularLinkedList {
                 size --;
                 return true;
             }
+
+            previous = current;
+            current = current.getFollowing();
+
         }while (current != tail.getFollowing());
         return false;
     }
+
+    //mostrar todos los eleme|ntos de la lista
+    public void listAll() {
+        if (tail == null){
+            System.out.println("lista vacia");
+            return;
+        }
+
+        Node current = tail.getFollowing();
+        do{
+            System.out.println(current.getFact());
+            current = current.getFollowing();
+
+        }while(current != tail.getFollowing());
+
+    }
+
+    //Obtener el tamaño de la lista
+    public int getSize() {
+        return size;
+    }
+
+    //Verificar si la lista esta vacia
+    public boolean isEmpty() {
+        return tail == null;
+    }
+
 }
