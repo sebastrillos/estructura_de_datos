@@ -1,9 +1,13 @@
 public class Nodo {
     private Jugador dato;
     private Nodo siguiente;
+    public static int tamano = -1;
 
     public Nodo(Jugador dato) {
-        this.dato = dato;
+
+        this.setDato( dato );
+        Nodo.tamano++;
+
     }
 
     public Jugador getDato() {

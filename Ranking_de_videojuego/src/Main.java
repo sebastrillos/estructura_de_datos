@@ -4,12 +4,12 @@ public class Main {
 
         lista.insertarfinal(new Jugador("jordin", "soporte", 85));
         lista.insertarfinal(new Jugador("jordin", "soporte", 85));
-        lista.insertarfinal(new Jugador("manuela", "corredor", 90));
+        lista.insertarfinal(new Jugador("jordin", "corredor", 90));
         System.out.println("repetido");
         lista.buscarRepetidos();
-        System.out.println("buscar " + lista.buscar("jordin"));
+        System.out.println("buscar" + lista.buscar("jordin"));
 
-        System.out.println("maximo " + lista.rankingMaximo());
+        System.out.println("maximo" + lista.rankingMaximo());
 
         System.out.println("lista");
         lista.listar();
