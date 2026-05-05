@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulación Navegador</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<h1>Navegador (Pila LIFO)</h1>
+
+<input type="text" id="pagina" placeholder="Escribe una página">
+<button onclick="visitar()">Visitar</button>
+<button onclick="atras()">Atras</button>
+
+<p id="actual"></p>
+
+<script>
+    class Navegador {
+        constructor() {
+            this.historial = [];
+        }
+
+        visitar(pagina) {
+            this.historial.push(pagina);
+        }
+
+        atras() {
+            if (this.historial.length > 1) {
+                this.historial.pop();
+            } else {
+                alert("No hay páginas anteriores");
+            }
+        }
+
+        paginaActual() {
+            if (this.historial.length > 0) {
+                return this.historial[this.historial.length - 1];
+            }
+            return "Sin páginas";
+        }
+    }
+
+    let nav = new Navegador();
+
+    function visitar() {
+        let pagina = document.getElementById("pagina").value;
+        nav.visitar(pagina);
+        actualizar();
+    }
+
+    function atras() {
+        nav.atras();
+        actualizar();
+    }
+
+    function actualizar() {
+        document.getElementById("actual").innerText =
+            "Página actual: " + nav.paginaActual();
+    }
+</script>
+
+</body>
+</html>
