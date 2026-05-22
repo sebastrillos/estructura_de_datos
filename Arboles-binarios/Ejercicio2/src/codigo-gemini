@@ -1,0 +1,94 @@
+/**
+ * Clase principal que gestiona el árbol binario de estudiantes
+ * y ejecuta los algoritmos de recorrido.
+ */
+public class SistemaAcademico {
+
+    // Nodo principal o raíz del árbol
+    NodoBinario raiz;
+
+    public SistemaAcademico() {
+        this.raiz = null; // El árbol inicia vacío
+    }
+
+    // =======================================================
+    // METODOS RECURSIVOS DE RECORRIDO
+    // =======================================================
+
+    /**
+     * Recorrido Preorden: Raíz -> Izquierda -> Derecha
+     */
+    public void recorridoPreorden(NodoBinario nodo) {
+        if (nodo == null) {
+            return; // Caso base: Si el nodo está vacío, detiene la recursión
+        }
+
+        System.out.print(nodo.idEstudiante + " "); // 1. Visita la Raíz (procesa dato)
+        recorridoPreorden(nodo.izquierdo);         // 2. Va al subárbol izquierdo
+        recorridoPreorden(nodo.derecho);           // 3. Va al subárbol derecho
+    }
+
+    /**
+     * Recorrido Inorden: Izquierda -> Raíz -> Derecha
+     */
+    public void recorridoInorden(NodoBinario nodo) {
+        if (nodo == null) {
+            return; // Caso base
+        }
+
+        recorridoInorden(nodo.izquierdo);          // 1. Va al subárbol izquierdo
+        System.out.print(nodo.idEstudiante + " "); // 2. Visita la Raíz (procesa dato)
+        recorridoInorden(nodo.derecho);           // 3. Va al subárbol derecho
+    }
+
+    /**
+     * Recorrido Postorden: Izquierda -> Derecha -> Raíz
+     */
+    public void recorridoPostorden(NodoBinario nodo) {
+        if (nodo == null) {
+            return; // Caso base
+        }
+
+        recorridoPostorden(nodo.izquierdo);        // 1. Va al subárbol izquierdo
+        recorridoPostorden(nodo.derecho);          // 2. Va al subárbol derecho
+        System.out.print(nodo.idEstudiante + " "); // 3. Visita la Raíz (procesa dato)
+    }
+
+    // =======================================================
+    // MÉTODO PRINCIPAL (EJECUCIÓN)
+    // =======================================================
+    public static void main(String[] args) {
+        SistemaAcademico sistema = new SistemaAcademico();
+
+        /* * CONSTRUCCIÓN MANUAL DEL ÁRBOL (Requerimiento: Mínimo 5 nodos)
+         * El árbol estructurado tendrá esta forma lógica:
+         * * 100 (Raíz)
+         * /   \
+         * 50     150
+         * /  \
+         * 25    75
+         */
+
+        sistema.raiz = new NodoBinario(100);                         // Nodo 1 (Raíz)
+        sistema.raiz.izquierdo = new NodoBinario(50);                // Nodo 2
+        sistema.raiz.derecho = new NodoBinario(150);                 // Nodo 3
+        sistema.raiz.izquierdo.izquierdo = new NodoBinario(25);      // Nodo 4
+        sistema.raiz.izquierdo.derecho = new NodoBinario(75);        // Nodo 5
+
+        // Mostrar resultados en la consola
+        System.out.println("=== SISTEMA ACADÉMICO: RECORRIDOS DE ÁRBOLES ===");
+
+        System.out.print("Recorrido Preorden: ");
+        sistema.recorridoPreorden(sistema.raiz);
+        System.out.println(); // Salto de línea
+
+        System.out.print("Recorrido Inorden:  ");
+        sistema.recorridoInorden(sistema.raiz);
+        System.out.println();
+
+        System.out.print("Recorrido Postorden: ");
+        sistema.recorridoPostorden(sistema.raiz);
+        System.out.println();
+        System.out.println("================================================");
+    }
+}
